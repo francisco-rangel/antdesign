@@ -52,6 +52,7 @@ const FormTodo = () => {
                 placeholder="Username" 
                 prefix={<UserOutlined />}
                 onChange={handleChange}
+                value={task}
               />
             </Form.Item>
             <Form.Item>

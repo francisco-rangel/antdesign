@@ -1,9 +1,14 @@
 import FormTodo from '../components/FormTodo';
+import Header from '../components/Header';
+import './style.css'
 
 const Home = () => {
   return (
     <div>
-      <FormTodo/>
+      <Header/>
+      <div className="content">
+        <FormTodo/>
+      </div>
     </div>
   )
 }
