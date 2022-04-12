@@ -3,8 +3,7 @@ import { Menu, Avatar, Image } from 'antd';
 import { HomeOutlined, 
   AntDesignOutlined, 
   SettingOutlined, 
-  InfoCircleOutlined,
-  UserOutlined } from '@ant-design/icons';
+  InfoCircleOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
 

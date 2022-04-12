@@ -1,33 +1,18 @@
 import { Input, Button, Col, Row, Form } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
-import { useState } from 'react';
 import './style.css';
 import List from './List';
+import { FormHook } from '../hooks/form';
 
 const FormTodo = () => {
-  const [task, setTask] = useState({})
-  const [tasks, setTasks] = useState([])
-
-  const handleChange = evt => {
-    const {name, value} = evt.target
-    setTask({...task, [name]: value})
-  }
-
-  const onFinish = evt => {
-    console.log('Success: ', evt);
-    setTasks([...tasks, task]);
-    setTask('')
-  }
-
-  const onError = err => {
-    console.log('Failed: ', err);
-  }
-
-  const deleteuser = index => {
-    const newTasks = [...tasks]
-    newTasks.splice(index, 1)
-    setTasks(newTasks)
-  }
+  const {
+    handleChange,
+    onFinish,
+    onError,
+    deleteuser,
+    task,
+    tasks
+  } = FormHook()
 
   return (
     <div>

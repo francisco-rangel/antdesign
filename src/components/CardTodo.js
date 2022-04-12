@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Divider,
   Avatar,
   Image,
@@ -6,15 +5,12 @@ import { Divider,
   Col,
   Badge,
   Card,
-  Button } from 'antd';
+  Button } from 'antd'
+  import { CounterHook } from '../hooks/counter';
 
 
 const CardTodo = ({index, task, deleteuser}) => {
-  const [count, setCount] = useState(0)
-
-  const useCount = () => {
-    setCount(count + 1)
-  }
+  const {useCount, count} = CounterHook()
 
   return (
     <div>
