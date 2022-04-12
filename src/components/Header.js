@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, Avatar } from 'antd';
+import { Menu, Avatar, Image } from 'antd';
 import { HomeOutlined, 
   AntDesignOutlined, 
   SettingOutlined, 
@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <div>
       <Menu onClick={handleClick} selectedKeys={[mail]} mode="horizontal">
-        <Menu.Item key="profile" icon={<Avatar size="small" icon={<UserOutlined />} />}>
+        <Menu.Item key="profile" icon={<Avatar size="small" src={<Image src="https://aiptcomics.com/wp-content/uploads/2019/12/BATMAN_Cv86-1.jpg" style={{ width: 30 }} />} />}>
           Profile
         </Menu.Item>
         <Menu.Item key="mail" icon={<HomeOutlined />}>
