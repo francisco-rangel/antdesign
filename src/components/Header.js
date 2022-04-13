@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'wouter';
 import { Menu, Avatar, Image } from 'antd';
 import { HomeOutlined, 
   AntDesignOutlined, 
@@ -8,7 +9,7 @@ import { HomeOutlined,
 const { SubMenu } = Menu;
 
 const Header = () => {
-  const [mail, setMail] = useState('mail')
+  const [current, setCurrent] = useState('')
 
   const handleClick = evt => {
     console.log('Click', evt)
@@ -16,15 +17,15 @@ const Header = () => {
 
   return (
     <div>
-      <Menu onClick={handleClick} selectedKeys={[mail]} mode="horizontal">
+      <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
         <Menu.Item key="profile" icon={<Avatar size="small" src={<Image src="https://aiptcomics.com/wp-content/uploads/2019/12/BATMAN_Cv86-1.jpg" style={{ width: 30 }} />} />}>
-          Profile
+          <Link to="/profile">Profile</Link>
         </Menu.Item>
-        <Menu.Item key="mail" icon={<HomeOutlined />}>
-          Home
+        <Menu.Item key="home" icon={<HomeOutlined />}>
+        <Link to="/">Home</Link>
         </Menu.Item>
         <Menu.Item key="about" icon={<InfoCircleOutlined />}>
-          About
+          <Link to="/about">About</Link>
         </Menu.Item>
         <SubMenu key="SubMenu" icon={<SettingOutlined />} title="Settings">
           <Menu.ItemGroup title="Profile">
