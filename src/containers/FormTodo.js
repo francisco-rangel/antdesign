@@ -1,7 +1,7 @@
 import { Input, Button, Col, Row, Form } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
-import './style.css';
-import List from './List';
+import '../components/style.css';
+import List from '../components/Home/List';
 import { FormHook } from '../hooks/form';
 
 const FormTodo = () => {
@@ -18,7 +18,7 @@ const FormTodo = () => {
     <div>
       <Row>
         <Col span={12}>
-          <Form 
+          <Form
             name="basic"
             labelCol={{ span: 8 }}
             wrapperCol={{ span: 16 }}
@@ -29,9 +29,12 @@ const FormTodo = () => {
           >
             <Form.Item
               name="task"
-              rules={[{ required: true, message: 'Ingresa tu nombre de usuario!' }]}
+              rules={[{
+                required: true,
+                message: 'Ingresa tu nombre de usuario!'
+              }]}
             >
-              <Input 
+              <Input
                 name="task" 
                 size="large" 
                 placeholder="Username" 

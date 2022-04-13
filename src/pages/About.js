@@ -1,9 +1,9 @@
-import React from 'react'
+import Content from '../components/About/Content'
 
 const About = () => {
   return (
     <div className="content">
-      <h2>About</h2>
+      <Content/>
     </div>
   )
 }
